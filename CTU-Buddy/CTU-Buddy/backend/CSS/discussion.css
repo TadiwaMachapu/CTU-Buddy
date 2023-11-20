@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh; /* Update to 100vh to cover the full viewport height */
+    display: flex;
+    flex-direction: column; /* Set flex direction to column */
+    align-items: center; /* Center child elements vertically */
+    justify-content: center; /* Center child elements horizontally */
+    color: #fff;
+}
+
+.chatbox {
+    background: #1d62c2a6;
+    width: 850px; /* Increase the width to make it wider */
+    height: 500px;
+    display: flex;
+    margin: 0 auto; /* Center horizontally using margin */
+    border-radius:25px ;
+}
+
+/* Updated CSS for col-1 and col-2 */
+.col-1 {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.msg-text {
+    background: rgba(255, 255, 55, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    flex-grow: 1;
+    font-weight: 300;
+    overflow-y: auto;
+}
+
+#name,
+#question {
+    text-align: center;
+    margin-top: 0vh; /* Stick input and textarea to the bottom */
+}
+
+.col-2 {
+    flex: 1; /* Adjust the flex value as needed to control width */
+    background: #3874c9;
+    padding: 20px; /* Add padding to col-2 as needed */
+    font-weight: 400;
+
+}
+
+textarea {
+    text-align: center; 
+    border: 0;
+    height: 7vh;
+    width: 100%;
+    background-color: #3874c9;
+    resize: none; /* Disable resizing for the textarea */
+    font-size: 16px;
+}
+
+.msg-text {
+    background: rgba(255, 255, 255, 0);
+    padding: 20px;
+    border-radius: 8px;
+    flex-grow: 1; /* Make the message area grow to take available space */
+    font-weight: 300;
+    overflow-y: auto; /* Add a scrollbar when content overflows */
+}
+
+.question-form {
+    align-self: flex-end; /* Align the input area to the bottom */
+}
+
+.msg-text h2{
+    font-weight: 400;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.msg-row2{
+    justify-content: flex-end;
+}
+
+.col-1 input{
+    border:0;
+    outline:none;
+    padding:20px 40px;
+    background:#3874c9;
+    color:#fff;
+    width:100%;
+    font-size:16px;
+    font-weight: 300;
+}
+
+::placeholder{
+    color: #fff;
+}
+
+.col-2 h3{
+    text-align: center;
+}
+
+.col-2 ul{
+    list-style:none;
+    padding:30px;
+    position: absolute;
+}
+
+.col-2 ul li{
+    padding: 5px 0;
+}
+
+.col-2 ul li::before{
+    content: '';
+    width: 10px;
+    height:10px;
+    border-radius:50%;
+    background:red;
+    display: inline-block;
+    margin-right:10px;
+}
+
+.col-2 ul li.online::before{
+    background-color: greenyellow;
+}
+
+.col-2 ul li.offline::before{
+    background-color: tomato;
+}
+
+.col-2 ul li.busy::before{
+    background-color: yellow;
+}
+
+button{
+    margin-top: 2vh;
+    margin-left: 20vh;
+    border-radius: 25px;
+    width: 30vh;
+    border-color:blue;
+    color: white;
+    background-color: #3874c9;
+}
+button{
+    margin-top: 4vh;
+    margin-left: 20vh;
+    border-radius: 25px;
+    width: 30vh;
+    border-color:blue;
+    color: white;
+    background-color: #3874c9;
+}

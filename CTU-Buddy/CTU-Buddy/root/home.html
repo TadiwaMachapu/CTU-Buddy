@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- The title of the webpage -->
+    <title>Home page</title>
+
+    <!-- Meta tags for character encoding, compatibility, and viewport settings -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="CTU">
+    <link rel="icon" type="image/icon" href="../backend/Media/icons/ICON.svg">
+
+    <!-- Linking to external files -->
+    <link rel="stylesheet" href="../backend/CSS/Home.css">
+    <link rel="stylesheet" href="../backend/CSS/background.css">
+    <link rel="stylesheet" href="../backend/CSS/navStyle.css">
+    <link rel="stylesheet" href="../backend/CSS/Home.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <script src="../backend/JavaScript/scroll-footer.js"></script>
+
+<body>
+
+    <div class="datetime">
+        <div class="time"></div>
+        <div class="date"></div>
+    </div>
+
+</body>
+
+</head>
+
+<script>
+    const timeElement = document.querySelector(".time");
+    const dateElement = document.querySelector(".date");
+
+    /**
+     * @param {Date} date
+     */
+    function formatTime(date) {
+        const hours24 = date.getHours();
+        const minutes = date.getMinutes();
+
+        return `${hours24.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}`;
+    }
+
+
+    /**
+     * @param {Date} date
+     */
+    function formatDate(date) {
+        const DAYS = [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+        ];
+        const MONTHS = [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+        ];
+
+        return `${DAYS[date.getDay()]}, ${MONTHS[date.getMonth()]
+            } ${date.getDate()} ${date.getFullYear()}`;
+    }
+
+    setInterval(() => {
+        const now = new Date();
+
+        timeElement.textContent = formatTime(now);
+        dateElement.textContent = formatDate(now);
+    }, 200);
+
+</script>
+
+<!-- Navigation bar -->
+<article id="navbar">
+    <nav>
+        <!-- Checkbox for the dropdown menu -->
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <!-- Dropdown menu -->
+            <div class="close">
+                <div class="dropdown">
+                    <!-- Navigation links -->
+                    <a href="home.html">Home</a>
+                    <a href="timetable.html">TimeTable</a>
+                    <a href="discussion.html">Discussion</a>
+                    <a href="Resources.html">Resources</a>
+                    <a href="about us.html">About us</a>
+                    <a href="contact_us.html">Contact Us</a>
+                </div>
+            </div>
+        </label>
+        <div>
+            <!-- Logo -->
+            <span class="logo">
+                <a href="../root/home.html"><img src="../backend/Media/CTU-PTE_MAIN-LOGO.png" alt="CTU_Logo"
+                        width="auto" height="100px"></a>
+            </span>
+            <!-- Navigation links -->
+            <ul>
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="timetable.html">Timetable</a></li>
+                <li><a href="discussion.html">Discussion</a></li>
+                <li><a href="Resources.html">Resources</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+</article>
+
+<!-- Background animation -->
+<div id="bg-animation">
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+</div>
+
+<div class="centered-text">
+    <h5 class="animated-text">Welcome CTU-Buddy</h5>
+    <p class="animated-text" style="font-size: 20px;">Ready for the day</p>
+</div>
+
+
+<!-- Panels for Images and Videos -->
+<div class="panel-container">
+    <div class="panel">
+        <!-- Add your first image or video here -->
+        <img src="../backend/Media/About_backgrounds/grad.jpg" alt="Image 1">
+        <p>lorem</p> <!-- Add your text here -->
+    </div>
+    <div class="panel">
+        <!-- Add your second image or video here -->
+        <video src="..backend/Media/Video/video (240p).mp4" controls autoplay></video>
+    </div>
+    <!-- Add more panels as needed -->
+</div>
+
+<!-- Footer -->
+<article id="footer">
+    <footer class="footer scroll-footer">
+        <div class="footer-content">
+            <!-- Footer navigation links -->
+            <div class="footer-nav">
+                <a href="home.html">Home</a>
+                <a href="timetable.html">Timetable</a>
+                <a href="discussion.html">Discussion</a>
+                <a href="Resources.html">Resources</a>
+                <a href="about us.html">About Us</a>
+                <a href="contact_us.html">Contact Us</a>
+            </div>
+            <div class="copyright">
+                <p>The Fundementalists</p>
+                <p>2023</p>
+                <img src="../backend/Media/copyright-solid.svg" alt="copyright">
+            </div>
+            <!-- Social media links -->
+            <div class="social-icons">
+                <a href="#" class="social-link">
+                    <img src="../backend/Media/facebook.svg" alt="Facebook">
+                    <span>Facebook</span>
+                </a>
+                <a href="#" class="social-link">
+                    <img src="../backend/Media/instagram.svg" alt="Instagram">
+                    <span>Instagram</span>
+                </a>
+                <a href="#" class="social-link">
+                    <img src="../backend/Media/twitter.svg" alt="Twitter">
+                    <span>Twitter</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+</article>
+
+</body>
+
+</html>

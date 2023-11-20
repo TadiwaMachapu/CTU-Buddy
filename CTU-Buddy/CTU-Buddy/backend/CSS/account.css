@@ -1,0 +1,45 @@
+#content {
+    margin-top:150px;
+    margin-bottom: 150px;
+}
+#content #tray {
+    background: linear-gradient(rgba(255,255,255,1), rgba(255, 255, 255, 0.623));
+    position: fixed;
+    height: 100vh;
+    width: 85vw;
+    left: 7.5vw;
+    top:0%;
+    display: inline-flex;
+}
+#content #tray * {
+    position: relative;
+}
+.vl {
+    border-left: 2px solid rgb(189, 189, 189);
+    height: calc(100vh - 30%);
+    position: relative;
+    height: 70vh;
+    margin-left: 10px;
+    width: 0;
+    margin-top: 10%;
+}
+#tray #tabdiv {
+    background: linear-gradient(90deg, rgba(165, 165, 165, 1), rgba(165, 165, 165, 0));
+    width: 20vw;
+    height: 100vh;
+    margin-top: 20px;
+}
+#tray #tabdiv *{
+    background: linear-gradient(90deg, rgba(165, 165, 165, 1), rgba(165, 165, 165, 0)) border-box;
+    font-size: xx-large;
+    margin-bottom: 15px;
+    list-style-type:none;
+    font-weight: bold;
+}
+[data-tab-content] {
+    display: none;
+}
+
+.actives[data-tab-content] {
+    display: block;
+}

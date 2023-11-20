@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta Charset="utf-8">
+    <title>CTU Online | Discussion</title>
+    <link rel="icon" type="image/icon" href="../backend/Media/icons/ICON.svg">
+
+
+    <meta name="viewport" content="width=device-width,initial -scale =1.0">
+    <link rel="stylesheet" href="..\backend\CSS\navStyle.css">
+    <link rel="stylesheet" href="..\backend\CSS\background.css">
+    <link rel="stylesheet" href="../backend/CSS/discussion.css">
+    <script src="../backend/JavaScript/scroll-footer.js"></script>
+    <script defer src="../backend/JavaScript/Background_selection.js"></script>
+    <script defer src="../backend/JavaScript/discuss.js"></script>
+
+</head>
+
+<body>
+    <article id="navbar">
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="close">
+                    <div class="dropdown">
+                        <div class="sidenav">
+                            <a href="home.html">Home</a>
+                            <a href="timetable.html">TimeTable</a>
+                            <a href="discussion.html">Discussion</a>
+                            <a href="Resources.html">Resources</a>
+                            <a href="contact_us.html">Contact Us</a>
+                        </div>
+                    </div>
+                </i>
+            </label>
+            <div>
+                <label class="logo">
+                    <a href="../root/home.html"><img src="..\backend\Media\CTU-PTE_MAIN-LOGO.png" alt="CTU_Logo"
+                            width="auto" height="100px"></a>
+                </label>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="timetable.html">Timetable</a></li>
+                    <li><a class="active" href="discussion.html">Discussion</a></li>
+                    <li><a href="Resources.html">Resources</a></li>
+                    <li><a href="about us.html">About Us</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </article>
+
+
+    <main class="container">
+        <div class="chatbox">
+            <div class="col-1">
+                <!-- Content for col-1 -->
+                <section id="discussion">
+                    <h2>Discussion</h2>
+                    <ul id="question-list"></ul>
+                </section>
+                <section id="question-form">
+                    <h2>Ask a Question</h2>
+                    <input type="text" id="name" placeholder="Your Name">
+                    <textarea id="question" placeholder="Your Question or Comment"></textarea>
+                    <button id="submit">Submit</button>
+                    <button id="Account">Account</button>
+                </section>
+            </div>
+            <div class="col-2">
+                
+                <h3>Friend List</h3>
+                <ul>
+                    <li class="online">Friend 1</li>
+                    <li class="offline">Friend 2</li>
+                    <li class="busy">Friend 3</li>
+                    <li class="online">Friend 4</li>
+                    <li class="busy">Friend 5</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+
+    <article id="footer">
+        <footer class="footer scroll-footer">
+            <div class="footer-content">
+                <!-- Footer navigation links -->
+                <div class="footer-nav">
+                    <a href="home.html">Home</a>
+                    <a href="timetable.html">Timetable</a>
+                    <a href="discussion.html">Discussion</a>
+                    <a href="Resources.html">Resources</a>
+                    <a href="about us.html">About Us</a>
+                    <a href="contact_us.html">Contact Us</a>
+                </div>
+                <div class="copyright">
+                    <p>The Fundementalists</p>
+                    <p>2023</p>
+                    <img src="../backend/Media/copyright-solid.svg" alt="copyright">
+                </div>
+                <!-- Social media links -->
+                <div class="social-icons">
+                    <a href="#" class="social-link">
+                        <img src="../backend/Media/facebook.svg" alt="Facebook">
+                        <span>Facebook</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <img src="../backend/Media/instagram.svg" alt="Instagram">
+                        <span>Instagram</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <img src="../backend/Media/twitter.svg" alt="Twitter">
+                        <span>Twitter</span>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </article>
+</body>
+
+</html>
